@@ -1,0 +1,342 @@
+body{
+
+margin:0;
+font-family:'Poppins',sans-serif;
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+color:purple;
+overflow:hidden;
+
+}
+
+
+/* BACKGROUND */
+
+.animatedBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.animatedBackground span {
+    position: absolute;
+    bottom: -50px; /* start just below view */
+    font-size: 2rem;
+    opacity: 0.7;
+    animation: floatUp linear infinite;
+}
+
+/* Floating animation */
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.7;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0.7;
+    }
+}
+/* Floating animation: move up continuously */
+@keyframes float {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-20vh) rotate(360deg); opacity: 0.7; }
+}
+
+
+/* FLOATING ICONS */
+/* ANIMATED BACKGROUND */
+
+.animatedBackground{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+
+background:linear-gradient(
+135deg,
+#1e3c72,
+#2a5298,
+#43cea2
+);
+
+}
+
+
+/* FLOATING ICONS */
+
+.animatedBackground span{
+
+position:absolute;
+
+font-size:40px;
+
+opacity:0.15;
+
+animation:floatIcons 20s linear infinite;
+
+}
+
+
+/* RANDOM POSITIONS */
+
+.animatedBackground span:nth-child(1){left:5%; animation-duration:25s;}
+.animatedBackground span:nth-child(2){left:20%; animation-duration:18s;}
+.animatedBackground span:nth-child(3){left:35%; animation-duration:22s;}
+.animatedBackground span:nth-child(4){left:50%; animation-duration:20s;}
+.animatedBackground span:nth-child(5){left:65%; animation-duration:17s;}
+.animatedBackground span:nth-child(6){left:75%; animation-duration:24s;}
+.animatedBackground span:nth-child(7){left:85%; animation-duration:19s;}
+.animatedBackground span:nth-child(8){left:95%; animation-duration:23s;}
+
+
+/* FLOAT ANIMATION */
+
+@keyframes floatIcons{
+
+0%{
+transform:translateY(100vh) rotate(0deg);
+}
+
+100%{
+transform:translateY(-100vh) rotate(360deg);
+}
+
+}
+
+
+/* HEADER */
+
+.header{
+
+text-align:center;
+margin-top:30px;
+
+}
+
+
+/* LOGO */
+
+.logo{
+
+font-size:60px;
+animation:floatLogo 3s infinite;
+
+}
+
+@keyframes floatLogo{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-10px)}
+100%{transform:translateY(0)}
+
+}
+
+
+/* TITLE BOX */
+
+.titleBox{
+
+padding:15px 40px;
+
+border-radius:40px;
+
+background:linear-gradient(
+270deg,
+#ff9de2,
+#4facfe,
+#00f2fe,
+#ff9de2
+);
+
+background-size:600% 600%;
+
+animation:gradientMove 10s ease infinite;
+
+box-shadow:0 0 20px rgba(0,0,0,0.3);
+
+}
+
+@keyframes gradientMove{
+
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+
+}
+
+.title{
+
+margin:0;
+font-size:34px;
+text-shadow:0 0 10px white;
+
+}
+
+
+/* CHAT CONTAINER */
+
+.chatContainer{
+
+width:60%;
+max-width:700px;
+height:350px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(10px);
+
+border-radius:20px;
+
+padding:20px;
+
+overflow-y:auto;
+
+margin-top:25px;
+
+}
+
+
+/* USER MESSAGE */
+
+.user {
+    align-self: flex-end;
+    background: #6a0dad; /* purple-ish background for user */
+    color: #ffffff;       /* white text */
+}
+
+.bot {
+    align-self: flex-start;
+    background: #2a5298; /* blue gradient shade for bot */
+    color: #ffffff;       /* white text */
+}
+
+/* BOT MESSAGE */
+
+.bot{
+
+display:flex;
+flex-direction:column;
+gap:8px;
+
+}
+
+
+/* BOT POINT BOX */
+
+.botPoint{
+
+background:#2c2c2c00;
+
+padding:10px;
+
+border-left:5px solid #00f2fe;
+
+border-radius:8px;
+
+}
+
+
+/* INPUT AREA */
+
+.inputArea{
+
+position:fixed;
+bottom:20px;
+
+display:flex;
+gap:10px;
+
+background:rgba(255,255,255,0.2);
+
+padding:12px;
+
+border-radius:20px;
+
+}
+
+
+/* INPUT */
+
+#userInput{
+
+width:300px;
+
+padding:10px;
+
+border:none;
+
+border-radius:10px;
+
+outline:none;
+
+}
+
+
+/* BUTTONS */
+
+button{
+
+border:none;
+
+padding:10px 15px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+/* BUTTON COLORS */
+
+.sendBtn{
+background:#27ae60;
+color:white;
+}
+
+.micBtn{
+background:#e74c3c;
+color:white;
+}
+
+.speakerBtn{
+background:#8e44ad;
+color:white;
+}
+
+.uploadBtn{
+
+background:#f39c12;
+
+padding:10px 15px;
+
+border-radius:10px;
+
+cursor:pointer;
+
+}
+
+.uploadBtn input{
+display:none;
+}
